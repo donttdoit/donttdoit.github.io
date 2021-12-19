@@ -1,0 +1,290 @@
+body{
+  font-family: fantasy;
+  background-color:rgb(29, 28, 26);
+}
+
+div, nav, footer{
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.burger-menu{
+  display: none;
+}
+
+.banner .image{
+  border: 3px solid rgba(84, 120, 175, 0.658);
+  transition: 0.3s;
+}
+
+.banner .image:hover{
+  border-color: rgb(163, 0, 0);
+  box-shadow: 0 0 40px rgb(107, 72, 72);
+}
+
+.item{
+  transition: 0.3s;
+  border: 3px solid rgb(163, 0, 0);
+  border-radius: 20px;
+  background-color:rgb(15, 15, 12);
+  color:rgb(128, 123, 106);
+  box-shadow: 0 0 15px #888;
+}
+
+.image{
+  border-radius: 20px;
+}
+
+article{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 400px);
+}
+
+footer{
+  display: flex;
+  justify-content: left;
+  color:rgb(128, 123, 106);
+  letter-spacing: 2px;
+}
+
+.item:hover{
+  transform: scale(1.05);
+}
+
+.rub
+{
+  color:rgb(38, 95, 16);
+  margin-left: 15px;
+}
+
+header div{
+  display: flex;
+  justify-content: center;
+}
+
+header div a{
+  margin: 0 15px;
+}
+
+header h2{
+  display: flex;
+  justify-content: center;
+  color:rgb(128, 123, 106);
+}
+
+.special{
+  color:rgb(163, 0, 0);
+  padding: 0 5px;
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+}
+
+
+.menu a{
+  text-decoration: none;
+  margin: 0 15px;
+  color:rgb(128, 123, 106);
+}
+
+.menu li{
+  display: inline-block;
+  margin: 0px 5px;
+  border-radius:10px;
+  transition: 0.3s;
+}
+
+.menu li:hover{
+  background-color:rgb(163, 0, 0);
+}
+
+.social{
+  position: fixed;
+  bottom: -10px;
+  right: 5px;
+}
+
+.social > a > .image{
+  opacity: 50%;
+}
+
+.social > a > .image:hover{
+  opacity: 100%;
+}
+
+@media only screen and (max-width : 768px)  {
+
+  .banner{
+    display: none;
+  }
+
+  article{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .burger-menu.active::before{
+      content: '\2716'; 
+  }
+
+  .menu.active{
+      display: block;
+      position: fixed;
+      z-index: 100;
+      background: linear-gradient(#010001 0,#1D1C1A 25%, #1D1C1A  50%, #010001 100% );
+      top: -10px;
+      left: -10px;
+      width: 100%;
+      height: 100%;
+  }
+
+  .menu > ul > li{
+      margin: 20px 0;
+      font-size: 20px;
+  }
+  .menu > ul.active{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+  }
+
+  header, .main, .screenshots, .system, footer{
+    margin: 0;
+    padding: 10px;
+  }
+
+  header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+  }
+
+  header h2, .menu > ul{
+      display: none;
+  }
+
+  .burger-menu{
+      display: block;
+      position: relative;
+      top: -5px;
+      background-color: transparent;
+      border: none;
+  }
+
+  .burger-menu::before{
+      content: '\2630';
+      color: rgb(163, 0, 0);
+      font-size: 48px;
+  }
+
+  .item, .item > .image{
+    width: 80%;
+    height: auto;
+  }
+
+  .social{
+    position: static;
+  }
+
+  footer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px){
+  .banner{
+    display: none;
+  }
+
+  article{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 300px);
+  } 
+
+  .burger-menu.active::before{
+    content: '\2716'; 
+  }
+
+  .menu.active{
+      display: block;
+      position: fixed;
+      z-index: 100;
+      background: linear-gradient(#010001 0,#1D1C1A 25%, #1D1C1A  50%, #010001 100% );
+      top: -10px;
+      left: -10px;
+      width: 100%;
+      height: 100%;
+  }
+
+  .menu > ul > li{
+      margin: 20px 0;
+      font-size: 20px;
+  }
+  .menu > ul.active{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+  }
+
+  header, .main, .screenshots, .system, footer{
+    margin: 0;
+    padding: 10px;
+  }
+
+  header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+  }
+
+  header h2, .menu > ul{
+      display: none;
+  }
+
+  .burger-menu{
+      display: block;
+      position: relative;
+      top: -5px;
+      background-color: transparent;
+      border: none;
+  }
+
+  .burger-menu::before{
+      content: '\2630';
+      color: rgb(163, 0, 0);
+      font-size: 48px;
+  }
+
+  .item, .item > .image{
+    width: 80%;
+    height: auto;
+  }
+
+  .social{
+    position: static;
+  }
+
+  footer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+}

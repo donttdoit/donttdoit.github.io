@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.burger-menu{
+    display: none;
+}
+
+header > div{
+    display: flex;
+    align-items: center;
+}
+
+.wrapper{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.screenshots, .system{
+    margin-top: 150px;
+}
+
+.main{
+    display: flex;
+}
+
+.intro > video, .intro{
+    height: auto;
+    padding: 40px 0;
+    margin: 0;
+}
+
+.main, .system {
+    min-width: 100vw;
+    margin: 20px 0;
+    background: linear-gradient(#1D1C1A 0, #010001 20%, #010001 80%, #1D1C1A 100%);
+}
+
+.system{
+    background: linear-gradient(#1D1C1A 0, #010001 40%, #010001 60%, #1D1C1A 100%);
+    margin-bottom: 40px;
+}
+
+.screenshots{
+    margin: 0;
+}
+
+.screenshots > .special{
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+
+.info, .system{
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:rgb(128, 123, 106); 
+}
+
+.buy > button{
+    width: 200px;
+    padding: 15px 0;
+    font-size: 20px;
+    color: #263a26;
+    background-color: #466346;
+    border: 2px solid #263a26;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buy > button:hover ~ .rub, .buy > button:hover{
+    border-color: green;
+    text-shadow: 1px 1px 2px green, 0 0 1em green, 0 0 0.2em green;
+    color: #888;
+}
+
+.buy > button:hover{
+    box-shadow: 0 0 25px green;
+}
+
+.buy .rub{
+    font-size: 48px;
+    transition: 0.3s;
+}
+
+.slider {
+    border: 3px solid rgb(163, 0, 0);
+    box-shadow: 0 0 15px #888;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    max-width: 1200px;
+    height: auto;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider-line {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+.slider-prev, .slider-next{
+    font-size: 48px;
+    color:rgb(128, 123, 106);
+    margin: -20px 15px;
+    background: transparent;
+    border: transparent;
+}
+
+.system ul{
+    text-align: start;
+}
+
+.system ul > li::marker{
+    font-size: 18px;
+    color:rgb(163, 0, 0);
+}
+
+
+@media only screen and (max-width : 1024px) {
+    .burger-menu.active::before{
+        content: '\2716'; 
+    }
+
+    .menu.active{
+        display: block;
+        position: fixed;
+        z-index: 100;
+        background: linear-gradient(#010001 0,#1D1C1A 25%, #1D1C1A  50%, #010001 100% );
+        top: -10px;
+        left: -10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu > ul > li{
+        margin: 20px;
+        font-size: 20px;
+    }
+    .menu > ul.active{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .info, .buy > button, .rub{
+        font-size: 16px;
+    }
+
+
+    header, .main, .screenshots, .system, footer{
+        margin: 0;
+        padding: 10px;
+    }
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    header h2, .menu > ul{
+        display: none;
+    }
+
+    .burger-menu{
+        display: block;
+        position: relative;
+        top: -5px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .burger-menu::before{
+        content: '\2630';
+        color: rgb(163, 0, 0);
+        font-size: 48px;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .intro > video, .intro{
+        width: 100%;
+        padding: 0;
+    }
+
+    .info{
+        display: block;
+        text-align: justify;
+    }
+
+    .slider{
+        min-width: 80%;
+    }
+
+    .special, .screenshots > .special{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .system{
+        background: linear-gradient(#1D1C1A 0, #010001 40%, #010001 80%, #1D1C1A 100%);
+        padding: 40px;
+    }
+
+    .social{
+        position: static;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
